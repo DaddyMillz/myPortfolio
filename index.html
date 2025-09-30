@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+<meta name="description" content="Portfolio of Shadrach Ogunnowo, Frontend Web Developer. Showcasing projects, skills, and experience in modern web development.">
+<meta name="keywords" content="Shadrach Ogunnowo, frontend developer, web developer, HTML, CSS, JavaScript, portfolio">
+<meta name="author" content="Shadrach Ogunnowo">
+
+<!-- Open Graph for Social Sharing -->
+<meta property="og:title" content="Shadrach Ogunnowo - Portfolio">
+<meta property="og:description" content="Frontend Web Developer portfolio showcasing projects, skills, and contact details.">
+<meta property="og:image" content="./asset/images/profilePicture.png">
+<meta property="og:url" content="https://your-portfolio-link.com">  <!-- need to be changed -->
+<meta property="og:type" content="website">
+
+  <title>Shadrach Ogunnowo - Portfolio</title>
+  <link rel="icon" type="image/png" href="./asset/images/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="dark">
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Shadrach-O OGUNNOWO</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <!-- Theme toggle -->
+      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <!-- Hamburger -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+     <div id="date-time"></div>
+
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <h1>Frontend Web Developer</h1>
+    <h3>B.Eng (Mech Eng.)</h3>
+    <p><span id="typing-text"></span></p>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn">View My Work</a>
+      <a href="resume.pdf" class="btn" download>Download Resume</a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+     <img src="./asset/images/profilePicture.png" alt="Shadrach Ogunnowo" class="profile-pic">
+      <p>
+    I'm Shadrach Ogunnowo, a <strong>Frontend Web Developer </strong>with a background in <strong>Mechanical Engineering. </strong> 
+    I create responsive, user-friendly websites and love solving problems with HTML, CSS, and JavaScript.
+  </p>
+  
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+      <h3>Project One</h3>
+      <div class="carousel">
+    <div class="carousel-images">
+      <img src="./asset/images/bulbOn2.png" alt="bulbOn">
+      <img src="./asset/images/bulbOff2.png" alt="bulbOff">
+    </div>
+    <!-- Carousel controls -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+  <p>A fun webpage to turn a bulb on, off and also hide it.</p>
+  <a href="https://daddymillz.github.io/bulb/" target="_blank" class="btn">Live Demo</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Project Two</h3>
+        <div class="carousel">
+    <div class="carousel-images">
+      <img src="./asset/images/landingPageHero.png" alt="heroSection">
+      <img src="./asset/images/ecommerceProduct.png" alt="product">
+    </div>
+    <!-- Carousel controls -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+  <p>A responsive e commerce landing page.</p>
+  <a href="https://daddymillz.github.io/landing-page/" target="_blank" class="btn">Live Demo</a>
+</div>
+  
+
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Responsive Web Design</li>
+      <li>UI/UX with animations</li>
+    </ul>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+ <section id="contact" class="contact">
+  <h2>Contact Me</h2>
+  <form action="https://formspree.io/f/mgvnkrag" method="post" class="contact-form">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="contact">Email or Phone</label>
+      <input type="text" id="contact" name="contact" required>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+
+    <button type="submit" class="btn">Send</button>
+  </form>
+</section>
+
+<!-- ===== SOCIALS ===== -->
+<section id="socials" class="socials">
+  <h2>Connect With Me</h2>
+  <ul>
+    <li>
+      <a href="https://x.com/OGUNNOWO_SO" target="_blank">
+        <i class="fa-brands fa-x-twitter twitter"></i> @OGUNNOWO_SO
+      </a>
+    </li>
+    <li>
+      <a href="https://linkedin.com/in/shadrach-ogunnowo" target="_blank">
+        <i class="fa-brands fa-linkedin linkedin"></i> Shadrach-O OGUNNOWO
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/DaddyMillz" target="_blank">
+        <i class="fa-brands fa-github github"></i> DaddyMillz
+      </a>
+    </li>
+    <li>
+      <a href="https://discordapp.com/users/yourdiscordid" target="_blank">
+        <i class="fa-brands fa-discord discord"></i> shadrach_o
+      </a>
+    </li>
+    <li>
+      <a href="mailto:shadrachoogunnowo@gmail.com">
+        <i class="fa-solid fa-envelope email"></i> shadrachoogunnowo@gmail.com
+      </a>
+    </li>
+    <li>
+      <a href="https://wa.me/2349054113325?text=Hello%2C%20I%20found%20your%20portfolio!" target="_blank">
+        <i class="fa-brands fa-whatsapp whatsapp"></i> +2349054113325
+      </a>
+    </li>
+  </ul>
+</section>
+
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 Shadrach Ogunnowo. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
