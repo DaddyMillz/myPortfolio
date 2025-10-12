@@ -212,10 +212,10 @@ body:not(.dark) .project-card {
 .carousel {
   position: relative;
   width: 100%;
-  max-width: 400px;   /* adjust size of your box */
+  max-width: 400px;   
   margin: auto;
-  overflow: hidden;   /* keeps images inside */
-  border-radius: 8px; /* optional rounded corners */
+  overflow: hidden;   
+  border-radius: 8px; 
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
@@ -267,11 +267,11 @@ body:not(.dark) .project-card {
 /* On tablets (≥768px), make 2 columns */
 @media (min-width: 768px) {
   .skills ul {
-    display: grid;                /* switch from table to grid */
+    display: grid;                
     grid-template-columns: repeat(2, auto);
-    gap: 0.5rem 2rem;             /* space between rows and columns */
-    justify-content: center;      /* center the grid */
-    padding-left: 0;              /* reset padding */
+    gap: 0.5rem 2rem;            
+    justify-content: center;      
+    padding-left: 0;              
   }
 }
 
@@ -360,7 +360,7 @@ footer {
 .socials a {
   text-decoration: none;
   font-size: 1.1rem;
-  color: var(--text-color); /* keeps usernames in your theme color */
+  color: var(--text-color); 
   display: flex;
   align-items: center;
   gap: 8px;
@@ -395,12 +395,11 @@ footer {
 }
 
 /* Brand colors for icons */
-.twitter { color: #1DA1F2; }   /* X / Twitter */
-.linkedin { color: #0077B5; }  /* LinkedIn */
-.github { color: #333; }       /* GitHub */
-.discord { color: #5865F2; }   /* Discord */
-.email { color: #e26054; }     /* Gmail red */
-.whatsapp { color: #25D366; }  /* WhatsApp green */
+.twitter { color: #1DA1F2; }  
+.linkedin { color: #0077B5; }  
+.github { color: #333; }       
+.email { color: #e26054; }    
+.whatsapp { color: #25D366; }  
 
 
 /* ===== RESPONSIVE ===== */
@@ -438,4 +437,55 @@ footer {
 footer p {
 font-size: 0.9rem;
 }
+
+/* ===== Resume Responsive Fix ===== */
+.resume-section {
+  padding: 1.5rem;
+}
+
+.resume-frame {
+  width: 100%;
+  height: 85vh;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .resume-section {
+    padding: 1rem;
+  }
+
+  .resume-frame {
+    height: 70vh;             
+    transform: none;          
+    max-width: 100%;
+    border-radius: 6px;
+  }
+}
+
+/* Prevent Google Docs iframe from floating or resizing */
+.resume-section {
+  overflow: hidden;
+  position: relative;
+}
+
+.resume-frame {
+  width: 100%;
+  height: 90vh;
+  border: none;
+  border-radius: 8px;
+  display: block;
+  background: #fff; /* keeps white background when loading */
+}
+
+/* Tighter control for mobile */
+@media (max-width: 768px) {
+  .resume-frame {
+    height: 85vh;
+    transform: none; /* remove scale issue */
+  }
+}
+
 

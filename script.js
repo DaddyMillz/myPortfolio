@@ -77,7 +77,7 @@ function updateDateTime() {
 }
 
 setInterval(updateDateTime, 1000);
-updateDateTime(); // run once immediately
+updateDateTime(); 
 
 
 
