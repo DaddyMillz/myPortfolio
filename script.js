@@ -70,14 +70,39 @@ function updateDateTime() {
     month: "long", 
     day: "numeric", 
     hour: "2-digit", 
-    minute: "2-digit", 
-    second: "2-digit" 
+    minute: "2-digit"
   };
   document.getElementById("date-time").textContent = now.toLocaleString("en-US", options);
 }
 
 setInterval(updateDateTime, 1000);
 updateDateTime(); 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const devCard = document.querySelector(".dev-card");
+  if (!devCard) return;
+
+  const fullHTML = devCard.innerHTML.trim();
+  devCard.innerHTML = ""; // clear before typing
+
+  let i = 0;
+  const speed = 35; // typing speed 
+  function typeEffect() {
+    if (i < fullHTML.length) {
+      // slice HTML as it types — keeps color spans
+      devCard.innerHTML = fullHTML.slice(0, i) + "<span class='cursor'>|</span>";
+      i++;
+      requestAnimationFrame(() => setTimeout(typeEffect, speed));
+    } else {
+      // remove cursor when done
+      devCard.querySelector(".cursor")?.remove();
+    }
+  }
+
+  typeEffect();
+});
+
+
 
 
 
