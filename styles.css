@@ -127,6 +127,16 @@ h1, h2, h3 {
   padding: 2rem;
 }
 
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: -3rem auto 1rem;
+  display: block;
+  border: 3px solid var(--accent-color);
+}
+
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 0;
@@ -160,18 +170,6 @@ h1, h2, h3 {
 }
 
 /* ===== SECTIONS ===== */
-
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 1rem auto;
-  display: block;
-  border: 3px solid var(--accent-color);
-}
-
-
 .about {
   background: var(--section-bg);
   margin-top: 1rem;
@@ -194,7 +192,13 @@ section {
   border-radius: 10px;
   padding: 3rem 2rem;
 }
-
+.projects h3{
+  color: #3b9180;
+  margin-bottom: 15px;
+}
+.projects p {
+  margin-bottom: 10px;
+}
 .project-card {
   background: #2a2a2a;
   margin: 1rem auto;
@@ -252,6 +256,7 @@ body:not(.dark) .project-card {
   font-size: 0.9rem;
   color: var(--accent-color);
   margin-top: 0.5rem;
+  display: none;
 }
 
 
