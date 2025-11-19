@@ -286,6 +286,13 @@ body:not(.dark) .project-card {
   }
 }
 
+.certification{
+  justify-content: center;
+  justify-items: center;
+  list-style-position: inside;
+  text-align: left;
+  padding-left: 0;
+}
 
 
 /* ===== CONTACT ===== */
