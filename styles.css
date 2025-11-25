@@ -144,8 +144,8 @@ h1, h2, h3 {
 
 #typing-text {
   border-right: 2px solid var(--accent-color);
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
   white-space: nowrap;
   overflow: hidden;
 }
