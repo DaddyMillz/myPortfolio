@@ -253,11 +253,10 @@ body:not(.dark) .experience-card {
   color: var(--accent-color);
 }
 
-
 /* ===== Projects Grid ===== */
 .project-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr; /* default: mobile */
   gap: 1.5rem;
   padding: 0;
 }
@@ -305,16 +304,17 @@ body:not(.dark) .project-card {
   color: var(--text-color);
 }
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
+/* Tablet view: 2 columns */
+@media (min-width: 768px) {
   .project-cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 768px) {
+/* Desktop view: 3 columns */
+@media (min-width: 1024px) {
   .project-cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
