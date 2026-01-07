@@ -254,47 +254,70 @@ body:not(.dark) .experience-card {
 }
 
 
-/* ===== PROJECT GRID LAYOUT ===== */
-.projects {
+/* ===== Projects Grid ===== */
+.project-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
-  padding: 3rem 2rem;
+  padding: 0;
 }
 
-
-/* Make Projects heading span full row */
-.projects h2 {
-  grid-column: 1 / -1;
-}
-
-
-/* Tablet view */
-@media (min-width: 768px) {
-  .projects {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: stretch;
-  }
-}
-
-/* Desktop view */
-@media (min-width: 1024px) {
-  .projects {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Ensure cards fill grid nicely */
+/* Project card styling */
 .project-card {
+  background: #2a2a2a;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  justify-content: space-between;
+  transition: background 0.3s;
 }
 
-.project-card .btn {
-  margin-top: auto;
-  align-self: center;
+body:not(.dark) .project-card {
+  background: #e0e0e0;
+  color: #121212;
 }
+
+/* Project heading inside card */
+.project-card h3 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Tech used */
+.project-card .tech-used {
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  margin: 0.5rem 0;
+}
+
+/* Center the button */
+.project-card .btn {
+  align-self: center; /* centers the button horizontally */
+  margin-top: auto;   /* push button to bottom if content varies */
+}
+
+/* Projects section heading */
+.projects h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .project-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .project-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 .carousel {
