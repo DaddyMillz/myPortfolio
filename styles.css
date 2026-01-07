@@ -257,9 +257,11 @@ body:not(.dark) .experience-card {
 /* ===== PROJECT GRID LAYOUT ===== */
 .projects {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 3rem 2rem;
 }
+
 
 /* Make Projects heading span full row */
 .projects h2 {
