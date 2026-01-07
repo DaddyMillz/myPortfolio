@@ -176,7 +176,7 @@ h1, h2, h3 {
   margin-top: 1rem;
   border-radius: 10px;
   padding: 3rem 2rem;
-  max-width: 800px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.8;
@@ -213,6 +213,87 @@ body:not(.dark) .project-card {
   background: #e0e0e0;
   color: #121212;
 }
+
+/* ===== EXPERIENCE SECTION ===== */
+.experience {
+  background: var(--section-bg);
+  margin-top: 1rem;
+  border-radius: 10px;
+  padding: 3rem 2rem;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.experience h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-color); /* white in light mode, dark in dark mode */
+}
+ 
+
+
+.experience-card {
+  background: #2a2a2a;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  transition: background 0.3s;
+}
+
+body:not(.dark) .experience-card {
+  background: #e0e0e0;
+  color: #121212;
+}
+
+.experience-card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+
+
+/* ===== PROJECT GRID LAYOUT ===== */
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* Make Projects heading span full row */
+.projects h2 {
+  grid-column: 1 / -1;
+}
+
+
+/* Tablet view */
+@media (min-width: 768px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+  }
+}
+
+/* Desktop view */
+@media (min-width: 1024px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Ensure cards fill grid nicely */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-card .btn {
+  margin-top: auto;
+  align-self: center;
+}
+
 
 .carousel {
   position: relative;
@@ -288,6 +369,44 @@ body:not(.dark) .project-card {
 }
 
 
+/* ===== CERTIFICATIONS SECTION ===== */
+.certifications {
+  background: var(--section-bg);
+  margin-top: 1rem;
+  border-radius: 10px;
+  padding: 3rem 2rem;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.certifications h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-color); /* white in light mode, black in dark mode */
+}
+
+.cert-card {
+  background: #2a2a2a;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  transition: background 0.3s;
+}
+
+body:not(.dark) .cert-card {
+  background: #e0e0e0;
+  color: #121212;
+}
+
+.cert-card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+
+
 
 /* ===== CONTACT ===== */
 .contact-form {
@@ -344,7 +463,7 @@ footer {
   margin-top: 1rem;
   border-radius: 10px;
   padding: 2rem;
-  max-width: 600px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
